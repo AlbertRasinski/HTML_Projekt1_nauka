@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV application</title>
+    </head>
+    <body>
+        <header>
+            <a href="../../HomePage.html"><img src="../../image/banner.jpg"></a>
+            <audio src="../../sound/background.mp3" autoplay controls loop></audio>
+            <hr/>
+        </header>
+        <h1>Aplikuj CV:</h1>
+        <main>
+            <form action="http://www.example.com/cv.php" method="POST">
+                <fieldset>
+                    <legend>Dane osobiste</legend>
+                    <label>
+                        <p>Imię:<br>
+                        <input type="text" name="Imię" size="15" maxlength="30" placeholder="Imię" required></p> 
+                    </label>
+                    <label>
+                        <p>Nazwisko:<br>
+                        <input type="text" name="Nazwisko" size="15" maxlength="30" placeholder="Nazwisko" required></p> 
+                    </label>
+                    Płeć:<br/>
+                    <label>
+                        <input type="radio" name="plec" value="mezczyzna" checked>
+                        Mężczyzna
+                    </label><br/>
+                    <label>
+                        <input type="radio" name="plec" value="kobieta">
+                        Kobieta
+                    </label><br/>
+                    <label>
+                        <input type="radio" name="plec" value="inna">
+                        Inna
+                    </label><br/>
+                    <label>
+                        <p>Data urodzenia: <br>
+                        <input type="date" name="DataUrodzenia" value="2020-07-20" required min="1990-01-01" max="2030-12-31"></p>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Dodatkowe informacje: </legend>
+                    <p>Zainteresowania:<br/>
+                    <label>
+                        <input type="checkbox" name="zainteresowania" value="kino">Kino
+                    </label><br/>
+                    <label>
+                        <input type="checkbox" name="zainteresowania" value="gry">Gry
+                    </label><br/>
+                    <label>
+                        <input type="checkbox" name="zainteresowania" value="seriale">Seriale
+                    </label><br/>
+                    <label>
+                        <input type="checkbox" name="zainteresowania" value="motoryzacja">Motoryzacja
+                    </label></p>
+                    <p>Inne:<br/>
+                    <textarea name="zainteresowania" cols="40" rows="4" placeholder="Inne Zainteresowania"></textarea>
+                    </p>
+                    <p>Gdzie znalazłeś ofertę pracy?:<br/>
+                    <select name="skadOferta">
+                        <option value="OficjalnaStrona">Oficjalna strona firmy</option>
+                        <option value="Znajomy">Od znajomego</option>
+                        <option value="SerwisRekrutacyjny">Serwis rekrutacyjny</option>
+                        <option value="Inne">Inne</option>
+                    </select></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Końcowe dane</legend>
+                    <p>Podaj swój mail: <br><input type="email" name="email" required></p>
+                    <p>Podeślij plik z Twoim CV:<br>
+                    <input type="file" name="plikCV" required></p>
+                </fieldset>
+                <input type="submit" value="submit">
+
+            </form>
+        </main>
+    </body>
+</html>
